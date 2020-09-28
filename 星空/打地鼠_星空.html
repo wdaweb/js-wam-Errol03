@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <title>星空</title>
+    <style>
+
+        /* transform: translate(20px 20px); */
+      
+      
+      /* #bg {
+        background-image: url("bg.jpg");
+      } */
+
+      body {
+        /* 滑鼠樣式 */
+        cursor: url(./cusor.png) 50 50, auto;
+        background:black;
+        background-size: contain;
+        font-family: 'ZCOOL XiaoWei', serif;
+        font-size: 20px;
+      }
+      #game td {
+        width: 60px;
+        height: 60px;
+        border: 0px solid rgba(141, 35, 35, 0.904);
+        margin: 2px;
+        padding: 2px;
+        text-align: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+
+      /* 地鼠before */
+      .red {
+        background-image: url("star.png");
+        /* background-size: 900px 600px; */
+        background-size: contain;
+      }
+
+      /* 地鼠after */
+      .blue {
+        background: none;
+      }
+/* 按鈕沒反應 */
+      /* #btn-start{
+text-align: center;} */
+
+      p {
+        color: aliceblue;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bg"></div>
+    <h3 style="color: rgb(255, 221, 146,0.3); font-size: 30px;transform: translate(660px,750px);">來</h3>
+    <h3 style="color: rgba(255, 221, 146); font-size: 40px;transform: translate(720px,710px);">抓&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+    <h3 style="color: rgba(255, 221, 146, 0.5); font-size: 40px; transform: translate(805px,640px);">我&nbsp;&nbsp;</h3>
+    <h3 style="color: rgba(255, 221, 146); font-size: 40px; transform: translate(815px,520px);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;呀</h3>
+
+
+
+    <!-- 九宮格 -->
+    <table id="game">
+      <tr>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+      </tr>
+      <tr>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+      </tr>
+      <tr>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+      </tr>
+      <tr>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        <td id="hole13"></td>
+        
+        <tr>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+          <td id="hole8"></td>
+         
+        </tr>
+        <tr>
+          <td id="hole7"></td>
+          <td id="hole7"></td>
+          <td id="hole7"></td>
+          <td id="hole7"></td>
+          <td id="hole7"></td>
+          <td id="hole7"></td>
+          <td id="hole7"></td>
+          <td id="hole7"></td>
+          <td id="hole7"></td>
+          <td id="hole7"></td>
+          <td id="hole7"></td>
+          <td id="hole7"></td>
+          <td id="hole7"></td>
+          <td id="hole7"></td>
+         
+        </tr>
+        <p>
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+          <td id="hole6"></td> 
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+          <td id="hole6"></td>
+         
+            <td id="hole5"></td>
+            <td id="hole5"></td>
+            <td id="hole5"></td>
+            <td id="hole5"></td>
+            <td id="hole5"></td>
+            <td id="hole5"></td>
+            <td id="hole5"></td>
+            <td id="hole5"></td>
+            <td id="hole5"></td>
+            <td id="hole5"></td>
+            <td id="hole5"></td>
+            <td id="hole5"></td>
+            <td id="hole5"></td>
+            <td id="hole5"></td>
+             <td id="hole5"></td>
+             <tr>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+          <td id="hole4"></td>
+        </p>
+      </tr>
+      <tr>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+        <td id="hole3"></td>
+   
+      </tr>
+      <tr>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+        <td id="hole2"></td>
+      </tr>
+      <tr>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        
+     
+      </tr>
+      <tr>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+        <td id="hole1"></td>
+      </tr>
+    </table>
+
+
+    <!-- 螢幕顯示 -->
+    <!-- <input type="button" value="數星星" id="btn-start"/> -->
+    <input type="button" id="btn-start" style="background-image:url(./按鈕.png);width:192px;height:190px; border-radius: 50%; transform: translate(698px,-503px); position: absolute;">
+    <p>
+      &nbsp;&nbsp;星星囊:
+      <span id="text-score">0</span>
+     
+      &nbsp;&nbsp;摘星時間:
+     <span id="text-timer">10</span>
+      
+     &nbsp;&nbsp;摘星紀錄:<span id="text-highscore"></span>
+     
+    <span id="text-highplayer"></span>
+    </p>
+    
+    <!-- 播音樂 -->
+    <audio src="magic-wand-1.mp3" id="lihai"></audio>
+
+    <script>
+      // 宣告各項目
+      const btnStart = document.getElementById("btn-start");
+      const holes = document.querySelectorAll("#game td");
+      const textScore = document.getElementById("text-score");
+      const texttimer = document.getElementById("text-timer");
+      const textHighPlayer = document.getElementById("text-highplayer");
+      const textHighScore = document.getElementById("text-highscore");
+      // 音效
+      // const lihai = document.getElementById("lihai");
+      const rihai = new Audio();
+      rihai.src = "./magic-wand-1.mp3";
+      // 分數
+      let score = 0;
+
+      let isInGame = false;
+      // 時間
+      let timer = 0;
+      // 最高分數
+      let highscore = { name: "", score: 0 };
+      let highscoreStorage = JSON.parse(localStorage.getItem("highscore"));
+      if (highscoreStorage !== null) {
+        highscore = highscoreStorage;
+        textHighPlayer.innerText = highscore.name;
+        textHighScore.innerText = highscore.score;
+      }
+      // 遊戲時間設定  10秒
+      btnStart.onclick = () => {
+        btnStart.disabled = true;
+// 計算分數
+        score = 0;
+        textScore.innerText = score;
+
+        isInGame = true;
+
+        timer = setInterval(game, 1000);
+        setTimeout(end, 10000);
+
+        game();
+      };
+
+      let time = parseInt("10");
+      if (!isNaN(time) && time > 0) {
+        texttimer.innerText = `剩餘 ${time} 秒`;
+        let timer = setInterval(() => {
+          time--;
+          texttimer.innerText = `剩餘 ${time} 秒`;
+          if (time <= 0) {
+            clearInterval(timer);
+            texttimer.innerText = "願望即將成真";
+            texttimer.style.color = "red";
+          }
+        }, 1000);
+      }
+
+      const game = () => {
+        for (const hole of holes) {
+          hole.classList.remove("red");
+          hole.classList.remove("blue");
+        }
+// 用迴圈讓星星隨機出現個數、鼠洞
+        for (let i = 0; i < 6; i++) {
+          const random = Math.floor(Math.random() * 400);
+          holes[random].classList.add("red");
+        }
+      };
+
+      const end = () => {
+        clearInterval(timer);
+
+        for (const hole of holes) {
+          hole.classList.remove("red");
+          hole.classList.remove("blue");
+        }
+
+        btnStart.disabled = false;
+        inputText = prompt(`請許下 ${score}個願望`);
+        rihai.play()
+       
+        
+        
+        // if (highscoreStorage === null || highscore.score < score) {
+        //   const name = prompt(`請許下 ${score}個願望`);
+        //   highscore.score = score;
+
+          // if (name === null || name.length === 0) {
+          //   highscore.name = "路人";
+          // } else {
+          //   highscore.name = name;
+          // }
+          // highscore.name = name || "路人";
+
+          localStorage.setItem("highscore", JSON.stringify(highscore));
+          textHighPlayer.innerText = highscore.name;
+          textHighScore.innerText = highscore.score;
+        
+      };
+
+      for (const hole of holes) {
+        hole.onclick = () => {
+          if (hole.classList.contains("red")) {
+            hole.classList.remove("red");
+            hole.classList.add("blue");
+
+            score++;
+            textScore.innerText = score;
+          }
+        };
+      }
+
+      document.onkeydown = (event) => {
+        const key = event.key;
+        if (!isNaN(key) && isInGame) {
+          const target = document.getElementById(`hole${key}`);
+          if (target && target.classList.contains("red")) {
+            target.classList.remove("red");
+            target.classList.add("blue");
+
+            score++;
+            textScore.innerText = score;
+          }
+        }
+      };
+
+      
+    </script>
+  </body>
+</html>
